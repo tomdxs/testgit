@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="StatusBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--Android 5.x可以设置状态栏颜色-->
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="colorPrimary">@color/statusBarColor</item>
+        <item name="colorPrimaryDark">@color/statusBarColor</item>
+    </style>
+
+</resources>

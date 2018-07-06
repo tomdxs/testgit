@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <RelativeLayout
+        android:id="@+id/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/statusBarColor">
+
+        <ImageView
+            android:id="@+id/searchbtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/searchbtn"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/project_name"
+            android:textColor="@color/login_edittext_color"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/scanbtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/saomabtn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+
+
+    <com.safeclass.xhg.xhg.utils.SuperSwipeRefreshLayout
+        android:id="@+id/home_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_title">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/home_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <GridView
+                    android:id="@+id/home_gridview_module"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_banner"
+                    android:layout_marginTop="5dp"
+                    android:cacheColorHint="#00000000"
+                    android:numColumns="4"
+                    android:verticalSpacing="5dp"/><!--平均分配空间-->
+
+                <!--灰色横条-->
+                <ImageView
+                    android:id="@+id/grey_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_below="@id/home_gridview_module"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray_line"/>
+
+                <TextView
+                    android:id="@+id/jingxuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_below="@id/grey_line"
+                    android:layout_marginTop="5dp"
+                    android:text="编辑 ● 精选"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/login_texticon"/>
+
+                <View
+                    android:id="@+id/jingxuan_line"
+                    android:layout_width="25dp"
+                    android:layout_height="3dp"
+                    android:layout_below="@id/jingxuan"
+                    android:layout_marginTop="3dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/statusBarColor"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:layout_below="@id/jingxuan_line"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line_color"
+                    android:nestedScrollingEnabled="false">
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+        </ScrollView>
+    </com.safeclass.xhg.xhg.utils.SuperSwipeRefreshLayout>
+
+</RelativeLayout>

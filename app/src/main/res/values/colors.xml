@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--其他颜色-->
+    <color name="statusBarColor">#FBC800</color>
+    <color name="app_bg">#FFFFFF</color>
+
+    <!--登录界面颜色-->
+    <color name="line_color">#E5E5E5</color>
+    <color name="login_texticon">#FF333333</color>
+    <color name="login_edittext_color">#FF333333</color>
+    <color name="login_register_color">#FF999999</color>
+
+    <!--首页-->
+    <color name="safe_edu_color">#FF666666</color>
+    <color name="gray_line">#F5F5F5</color>
+    <color name="bottom_line_color">#e8e8e8</color>
+    <color name="bottom_text_color">#FF333333</color>
+    <color name="bottom_bar_color">#FFFFFF</color>
+    <color name="video_title_color">#FF333333</color>
+    <color name="video_info_color">#999999</color>
+
+
+</resources>
